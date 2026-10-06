@@ -20,7 +20,7 @@ export default clerkMiddleware({
       'frame-ancestors': ["'none'"],
       'img-src': ["'self'", 'data:', 'https://img.clerk.com'],
       'media-src': ["'self'", ...(R2_ORIGIN ? [R2_ORIGIN] : [])],
-    },
+    }
   },
   frontendApiProxy: {
     enabled: (url: URL) => IS_PRODUCTION_KEY && url.host !== PRODUCTION_HOST,

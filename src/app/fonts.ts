@@ -1,11 +1,16 @@
-import { DM_Sans, Lora } from 'next/font/google';
+import { EB_Garamond, JetBrains_Mono, Karla } from 'next/font/google';
 
-export const dmSans = DM_Sans({
+export const ebGaramond = EB_Garamond({
   subsets: ['latin'],
-  variable: '--font-dm-sans'
+  variable: '--font-display-face',
 });
 
-export const lora = Lora({
+export const karla = Karla({
   subsets: ['latin'],
-  variable: '--font-lora'
+  variable: '--font-body-face',
+});
+
+export const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono-face',
 });

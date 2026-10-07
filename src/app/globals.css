@@ -97,6 +97,10 @@
   --watermark: var(--accent);
   --danger: #cf8f9c;
   --stamp-filter: invert(0.92);
+  /*----------Accents safe for text----------*/
+  --ink-robin: #537a87;
+  --ink-petal: #a06372;
+  --ink-sand: #7f744e;
 }
 
 /*----------Honor OS, except if user chose light.----------*/
@@ -111,6 +115,10 @@
     --watermark: var(--accent);
     --danger: #cf8f9c;
     --stamp-filter: invert(0.92);
+    /*----------Accents safe for text----------*/
+    --ink-robin: #537a87;
+    --ink-petal: #a06372;
+    --ink-sand: #7f744e;
   }
 }
 

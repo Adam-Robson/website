@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link';
 import { useEffect } from 'react';
-import '@/app/components/interior-pages.css';
-import '@/app/components/status-page.css';
+import '@/components/styles/interior-pages.css';
+import '@/components/styles/status-page.css';
 
 /**
  * Catches render and data-fetching failures

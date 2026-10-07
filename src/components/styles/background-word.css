@@ -1,0 +1,57 @@
+/* ── container ── */
+.bg-word-container {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  opacity: 0.13;
+  filter: blur(3px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── word ── */
+.bg-word {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--watermark);
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  font-size: 25vw;
+  --bg-word-tracking: 0.3em;
+  letter-spacing: var(--bg-word-tracking);
+  margin-inline-end: calc(-1 * var(--bg-word-tracking));
+}
+
+@media (width >= 40rem) {
+  .bg-word--extra {
+    display: none;
+  }
+
+  .bg-word-container {
+    justify-content: center;
+  }
+
+  .bg-word {
+    writing-mode: horizontal-tb;
+    font-size: 16vw;
+    --bg-word-tracking: 0.4em;
+  }
+}
+
+@media (width >= 64rem) {
+  .bg-word {
+    font-size: 13vw;
+    --bg-word-tracking: 0.6em;
+  }
+}
+
+@media (width >= 96rem) {
+  .bg-word {
+    font-size: 11vw;
+  }
+}

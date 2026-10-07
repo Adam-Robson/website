@@ -1,12 +1,12 @@
 'use client';
 import { useState } from 'react';
-import { isCollectable } from '@/lib/utils/is-collectable';
-import { FIELD_LABELS } from '@/lib/constants/field-labels';
 import AuthField from '@/components/auth/auth-field';
-import SubmitButton from '@/components/auth/submit-button';
 import FormFeedback from '@/components/auth/form-feedback';
+import SubmitButton from '@/components/auth/submit-button';
+import { FIELD_LABELS } from '@/lib/constants/field-labels';
 import useSignUpFlow from '@/lib/hooks/use-sign-up-flow';
-// import '@/app/components/auth-form.css';
+import { isCollectable } from '@/lib/utils/is-collectable';
+import '@/app/components/auth-form.css';
 
 export default function SignUpForm({
   requiredFields = [],
@@ -14,7 +14,16 @@ export default function SignUpForm({
   /** Required beyond email and password, per Clerk instance's settings. */
   requiredFields?: string[];
 }) {
-  const { step, email, blocked, errors, isSubmitting, submitDetails, submitUsername, submitCode } = useSignUpFlow({ redirectTo: '/' });
+  const {
+    step,
+    email,
+    blocked,
+    errors,
+    isSubmitting,
+    submitDetails,
+    submitUsername,
+    submitCode,
+  } = useSignUpFlow({ redirectTo: '/' });
   const [code, setCode] = useState('');
   const extraFields = requiredFields.filter(isCollectable);
 
@@ -79,10 +88,16 @@ export default function SignUpForm({
 
   if (step === 'username') {
     return (
-      <form className='auth-form' onSubmit={(e) => {
-        e.preventDefault();
-        submitUsername((document.getElementById('username') as HTMLInputElement).value);
-      }} noValidate>
+      <form
+        className='auth-form'
+        onSubmit={(e) => {
+          e.preventDefault();
+          submitUsername(
+            (document.getElementById('username') as HTMLInputElement).value,
+          );
+        }}
+        noValidate
+      >
         <p className='auth-hint'>Pick a username to finish your account.</p>
         {usernameField(true)}
         {feedback}
@@ -94,17 +109,21 @@ export default function SignUpForm({
   }
 
   return (
-    <form className='auth-form' onSubmit={(e) => {
-      e.preventDefault();
-      const form = e.currentTarget;
-      submitDetails({
-        email: (form.email as HTMLInputElement).value,
-        password: (form.password as HTMLInputElement).value,
-        username: (form.username as HTMLInputElement)?.value,
-        firstName: (form.first_name as HTMLInputElement)?.value,
-        lastName: (form.last_name as HTMLInputElement)?.value,
-      });
-    }} noValidate>
+    <form
+      className='auth-form'
+      onSubmit={(e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        submitDetails({
+          email: (form.email as HTMLInputElement).value,
+          password: (form.password as HTMLInputElement).value,
+          username: (form.username as HTMLInputElement)?.value,
+          firstName: (form.first_name as HTMLInputElement)?.value,
+          lastName: (form.last_name as HTMLInputElement)?.value,
+        });
+      }}
+      noValidate
+    >
       <AuthField
         id='email'
         label='Email'
@@ -118,10 +137,12 @@ export default function SignUpForm({
 
       {extraFields.includes('username') && usernameField(false)}
 
-      {([
-        ['first_name', 'firstName'],
-        ['last_name', 'lastName'],
-      ] as const)
+      {(
+        [
+          ['first_name', 'firstName'],
+          ['last_name', 'lastName'],
+        ] as const
+      )
         .filter(([field]) => extraFields.includes(field))
         .map(([field, errorKey]) => (
           <AuthField

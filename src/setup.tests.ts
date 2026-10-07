@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup } from '@testing-library/react';
-import { beforeEach, afterEach, vi } from 'vitest';
+import { afterEach, beforeEach, vi } from 'vitest';
 
-// jsdom does not implement HTMLMediaElement
-// implement here so that AudioProvider's toggles
-//
+/**
+ * Mocks HTMLMediaElement methods for testing purposes in jsdom environment.
+ */
 beforeEach(() => {
   vi.spyOn(window.HTMLMediaElement.prototype, 'play').mockImplementation(
     function (this: HTMLMediaElement) {

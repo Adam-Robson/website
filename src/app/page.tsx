@@ -1,4 +1,5 @@
 import BackgroundWord from '@/components/background-word';
+import HomeIntro from '@/components/home-intro';
 import SiteHeader from '@/components/site-header';
 import SongCatalog from '@/components/song-catalog';
 import { getAccessLevel } from '@/lib/auth/get-access-level';
@@ -13,6 +14,7 @@ export default async function Home() {
     <div className='page-wrapper page-wrapper--home'>
       <BackgroundWord />
       <SiteHeader variant='home' />
+      <HomeIntro />
       <main className='home-main'>
         {songs.length > 0 && <SongCatalog songs={songs} />}
       </main>

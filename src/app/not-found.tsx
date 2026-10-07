@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import SiteHeader from '@/components/site-header';
-import '@/app/components/interior-pages.css';
-import '@/app/components/status-page.css';
+import '@/components/styles/interior-pages.css';
+import '@/components/styles/status-page.css';
 
 export const metadata: Metadata = {
   title: 'Not Found',

@@ -1,0 +1,58 @@
+.home-intro {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 48.75rem;
+  margin-inline: auto;
+  padding-block: clamp(2rem, 1.5rem + 2.5vw, 3.5rem) var(--bar-clearance);
+  padding-inline: var(--spacing-gutter);
+}
+
+.home-intro-copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block-end: min(6.25rem, 10dvh);
+}
+
+.home-intro-kicker {
+  margin-block-end: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+
+.home-intro-lede-display {
+  margin-block-end: 1.25rem;
+  max-width: 14ch;
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.home-intro-mark {
+  color: var(--accent);
+}
+
+.home-intro-lede {
+  max-width: 46ch;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+@media (width < 30rem) {
+  .home-intro-lede-display {
+    max-width: 12ch;
+  }
+}

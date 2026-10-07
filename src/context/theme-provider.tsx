@@ -9,8 +9,11 @@ import {
   useState,
 } from 'react';
 import { THEME_COOKIE_NAME } from '@/lib/constants/theme';
-import type { ResolvedTheme, Theme } from '@/lib/types/theme';
-import type { ThemeContextValue } from '@/lib/types/theme';
+import type {
+  ResolvedTheme,
+  Theme,
+  ThemeContextValue,
+} from '@/lib/types/theme';
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 

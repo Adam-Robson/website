@@ -1,12 +1,12 @@
 import { ClerkProvider } from '@clerk/nextjs';
 import { cookies } from 'next/headers';
+import { ebGaramond, jetbrainsMono, karla } from '@/app/fonts';
 import SignInPrompt from '@/components/auth/sign-in-prompt';
 import JsonLd from '@/components/json-ld';
 import GlobalProvider from '@/context/global-provider';
 import { getAccessLevel } from '@/lib/auth/get-access-level';
 import { THEME_COOKIE_NAME } from '@/lib/constants/theme';
 import { parseTheme } from '@/lib/utils/parse-theme';
-import { dmSans, lora } from './fonts';
 import './globals.css';
 
 export default async function RootLayout({
@@ -21,7 +21,9 @@ export default async function RootLayout({
   return (
     <html
       lang='en'
-      className={theme === 'dark' ? 'dark' : theme === 'light' ? 'light' : ''}
+      className={`${ebGaramond.variable} ${jetbrainsMono.variable} ${karla.variable} ${
+        theme === 'dark' ? 'dark' : theme === 'light' ? 'light' : ''
+      }`}
     >
       <head>
         {/* DNS prefetch is not available via Metadata API */}
@@ -30,7 +32,7 @@ export default async function RootLayout({
         <link rel='preconnect' href='https://lefog.xyz/' />
         <JsonLd />
       </head>
-      <body className={`antialiased ${dmSans.variable} ${lora.variable}`}>
+      <body className='antialiased'>
         <ClerkProvider dynamic>
           <GlobalProvider theme={theme}>
             {children}

@@ -1,5 +1,5 @@
 'use client';
-import './theme-toggle.css';
+import '@/components/styles/theme-toggle.css';
 
 import { useTheme } from '@/context/theme-provider';
 

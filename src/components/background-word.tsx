@@ -1,4 +1,4 @@
-import '@/app/components/background-word.css';
+import '@/components/styles/background-word.css';
 
 export default function BackgroundWord() {
   return (

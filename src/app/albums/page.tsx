@@ -5,7 +5,7 @@ import SiteHeader from '@/components/site-header';
 import { getAccessLevel } from '@/lib/auth/get-access-level';
 import { listSongs } from '@/lib/db/r2/list-songs';
 import { toPlayableUrl } from '@/lib/utils/to-playable-url';
-import '@/app/components/interior-pages.css';
+import '@/components/styles/interior-pages.css';
 
 export const metadata: Metadata = {
   title: 'Albums',

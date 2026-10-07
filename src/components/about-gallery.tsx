@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import '@/app/components/about-gallery.css';
+import '@/components/styles/about-gallery.css';
 
 /**
  * A small interactive gallery component for the LE FOG website.

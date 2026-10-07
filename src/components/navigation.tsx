@@ -6,6 +6,7 @@ import {
   RadioIcon,
 } from '@phosphor-icons/react';
 import Navlink from '@/components/navlink';
+import '@/components/styles/navigation.css';
 
 export default function Navigation() {
   return (

@@ -1,7 +1,7 @@
-import { isAudioExtension } from '@/lib/db/utils/is-audio-extension';
+import { GetObjectCommand } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import { s3 } from '@/lib/db/r2/s3';
-import { GetObjectCommand } from '@aws-sdk/client-s3';
+import { isAudioExtension } from '@/lib/utils/is-audio-extension';
 
 /**
  * Returns a presigned URL for a single object.
@@ -16,8 +16,8 @@ export async function signObject(
   if (!isAudioExtension(key)) return null;
 
   const filename = key
-    .slice(key.lastIndexOf('/') + 1)
-    .replace(/["\\\u0000-\u001f\u007f]/g, '_');
+  .slice(key.lastIndexOf('/') + 1)
+  .replace(/["\\\p{Cc}]/gu, '_');
   return getSignedUrl(
     s3,
     new GetObjectCommand({

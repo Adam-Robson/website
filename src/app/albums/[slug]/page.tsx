@@ -10,9 +10,9 @@ import { listSongs } from '@/lib/db/r2/list-songs';
 import { albumBySlug } from '@/lib/utils/album-by-slug';
 import { orderedAlbumMeta } from '@/lib/utils/ordered-album-meta';
 import { toPlayableUrl } from '@/lib/utils/to-playable-url';
-import '@/app/components/interior-pages.css';
-import '@/app/components/album-shelf.css';
-import '@/app/albums/[slug]/album-page.css';
+import '@/components/styles/interior-pages.css';
+import '@/components/styles/album-shelf.css';
+import '@/components/styles/album-page.css';
 
 const COVER_SIZE = 900;
 

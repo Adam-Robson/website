@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import '@/app/components/sign-in-prompt.css';
+import '@/components/styles/sign-in-prompt.css';
 
 /**
  * The pinned sign-in bar for signed-out visitors

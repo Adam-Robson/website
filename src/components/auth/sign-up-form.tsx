@@ -6,7 +6,7 @@ import SubmitButton from '@/components/auth/submit-button';
 import { FIELD_LABELS } from '@/lib/constants/field-labels';
 import useSignUpFlow from '@/lib/hooks/use-sign-up-flow';
 import { isCollectable } from '@/lib/utils/is-collectable';
-import '@/app/components/auth-form.css';
+import '@/components/styles/auth-form.css';
 
 export default function SignUpForm({
   requiredFields = [],

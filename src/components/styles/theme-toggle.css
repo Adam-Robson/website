@@ -56,18 +56,26 @@
 }
 
 @media (hover: hover) {
+  .theme-toggle-wrapper {
+    position: relative;
+  }
+
   .theme-toggle-label {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 50%;
+    translate: -50% 0;
+    white-space: nowrap;
     visibility: hidden;
     opacity: 0;
   }
 
-  .theme-toggle-wrapper:hover .theme-toggle-label,
-  .theme-toggle-wrapper:focus-within .theme-toggle-label {
+  .theme-toggle:hover + .theme-toggle-label,
+  .theme-toggle:focus-visible + .theme-toggle-label {
     visibility: visible;
     opacity: 1;
   }
 }
-
 @media (pointer: coarse) {
   .theme-toggle::after {
     content: "";

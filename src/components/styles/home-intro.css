@@ -42,6 +42,9 @@
 
 .home-intro-mark {
   color: var(--accent);
+  white-space: nowrap;
+  letter-spacing: 0.18em;
+  margin-inline-end: -0.18em;
 }
 
 .home-intro-lede {
@@ -49,6 +52,24 @@
   font-weight: 300;
   line-height: 1.8;
   color: var(--text-muted);
+}
+
+/* The six palette colours as a short stripe above the kicker. */
+.home-intro-kicker::before {
+  content: "";
+  display: block;
+  width: 7.5rem;
+  height: 3px;
+  margin-block-end: 1rem;
+  background: linear-gradient(
+    to right,
+    var(--color-robin) 0% 16.667%,
+    var(--color-petal) 16.667% 33.333%,
+    var(--color-sand) 33.333% 50%,
+    var(--color-lilac) 50% 66.667%,
+    var(--color-iris) 66.667% 83.333%,
+    var(--color-wheat) 83.333% 100%
+  );
 }
 
 @media (width < 30rem) {

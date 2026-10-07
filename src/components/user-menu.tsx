@@ -4,7 +4,7 @@ import { useClerk, useUser } from '@clerk/nextjs';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import '@/app/components/user-menu.css';
+import '@/components/styles/user-menu.css';
 
 export default function UserMenu() {
   const { isLoaded, isSignedIn, user } = useUser();

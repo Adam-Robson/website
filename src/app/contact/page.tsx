@@ -1,7 +1,7 @@
 import ContactForm from '@/components/contact-form';
 import SiteHeader from '@/components/site-header';
-import '@/app/contact/contact.css';
-import '@/app/components/interior-pages.css';
+import '@/components/styles/contact.css';
+import '@/components/styles/interior-pages.css';
 import type { Metadata } from 'next';
 import { sharedOgImage } from '@/components/shared-og-image';
 

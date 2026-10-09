@@ -1,3 +1,26 @@
+/* Size of the background word, shared with anything placed relative to it. */
+:root {
+  --bg-word-size: 25vw;
+}
+
+@media (width >= 40rem) {
+  :root {
+    --bg-word-size: 16vw;
+  }
+}
+
+@media (width >= 64rem) {
+  :root {
+    --bg-word-size: 13vw;
+  }
+}
+
+@media (width >= 96rem) {
+  :root {
+    --bg-word-size: 11vw;
+  }
+}
+
 /* ── container ── */
 .bg-word-container {
   position: fixed;
@@ -7,8 +30,9 @@
   align-items: center;
   justify-content: space-around;
   overflow: hidden;
-  opacity: 0.13;
+  opacity: 0.35;
   filter: blur(3px);
+  mask-image: linear-gradient(to bottom, #000 40%, transparent 65%);
   pointer-events: none;
   user-select: none;
 }
@@ -18,10 +42,11 @@
   font-family: var(--font-display);
   font-weight: 400;
   line-height: 1;
-  color: var(--watermark);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--watermark);
   white-space: nowrap;
   writing-mode: vertical-rl;
-  font-size: 25vw;
+  font-size: var(--bg-word-size);
   --bg-word-tracking: 0.3em;
   letter-spacing: var(--bg-word-tracking);
   margin-inline-end: calc(-1 * var(--bg-word-tracking));
@@ -38,20 +63,13 @@
 
   .bg-word {
     writing-mode: horizontal-tb;
-    font-size: 16vw;
     --bg-word-tracking: 0.4em;
   }
 }
 
 @media (width >= 64rem) {
   .bg-word {
-    font-size: 13vw;
     --bg-word-tracking: 0.6em;
   }
 }
 
-@media (width >= 96rem) {
-  .bg-word {
-    font-size: 11vw;
-  }
-}

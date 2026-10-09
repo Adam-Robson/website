@@ -21,8 +21,8 @@ export default function SiteHeader({ variant }: Props) {
         </a>
       )}
       <Navigation />
-      <ThemeToggle />
-      <div className='flex items-center gap-5 shrink-0'>
+      <div className='site-header-actions'>
+        <ThemeToggle />
         <UserMenu />
       </div>
     </header>

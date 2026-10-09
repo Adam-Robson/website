@@ -143,6 +143,12 @@ export default async function AlbumPage({
             {album.blurb && <p className='album-page-blurb'>{album.blurb}</p>}
           </div>
         </header>
+        {accessLevel === 'guest' && albumSongs.length > 0 && (
+          <p className='album-page-note'>
+            Streaming is free with an account.{' '}
+            <Link href='/sign-up'>Sign up free</Link>
+          </p>
+        )}
 
         {albumSongs.length > 0 ? (
           <AlbumTracks

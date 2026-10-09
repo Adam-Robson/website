@@ -14,24 +14,13 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   justify-content: center;
-  padding-block-end: min(6.25rem, 10dvh);
-}
 
-.home-intro-kicker {
-  margin-block-end: 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-muted);
 }
-
 
 .home-intro-lede-display {
-  margin-block-end: 1.25rem;
-  max-width: 14ch;
   font-family: var(--font-display);
   font-size: var(--text-4xl);
   font-weight: 500;
@@ -40,25 +29,36 @@
   text-wrap: balance;
 }
 
-.home-intro-mark {
-  color: var(--accent);
-  white-space: nowrap;
-  letter-spacing: 0.18em;
-  margin-inline-end: -0.18em;
-}
-
-.home-intro-lede {
-  max-width: 46ch;
-  font-weight: 300;
-  line-height: 1.8;
+.home-intro-kicker {
+  margin-block-start: 1rem;
+  margin-inline: auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--text-muted);
 }
 
-/* The six palette colours as a short stripe above the kicker. */
+.home-intro-mark {
+  color: var(--text);
+  white-space: nowrap;
+  letter-spacing: 0.14em;
+  word-spacing: 0.3em;
+  margin-inline-end: -0.14em;
+}
+
+.home-intro-aside {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Six palette colours as a short stripe above the kicker. */
 .home-intro-kicker::before {
   content: "";
   display: block;
-  width: 7.5rem;
+  width: 100%;
   height: 3px;
   margin-block-end: 1rem;
   background: linear-gradient(

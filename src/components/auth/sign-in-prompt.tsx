@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import '@/components/styles/sign-in-prompt.css';
 
@@ -16,10 +17,14 @@ export default function SignInPrompt() {
   return (
     <div className='sign-in-prompt'>
       <div className='sign-in-prompt-inner'>
-        <p className='sign-in-prompt-text'>Sign in to stream the catalog</p>
+        <p className='sign-in-prompt-text'>
+          Listen to every song for free, with an account
+        </p>
         <div className='sign-in-prompt-links'>
-          <a href='/sign-up'>Create account</a>
-          <a href='/sign-in'>Sign in</a>
+          <Link href='/sign-up' className='sign-in-prompt-cta'>
+            Sign up free
+          </Link>
+          <Link href='/sign-in'>Sign in</Link>
         </div>
       </div>
     </div>

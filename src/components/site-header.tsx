@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Navigation from '@/components/navigation';
 import ThemeToggle from '@/components/theme-toggle';
 import UserMenu from '@/components/user-menu';
@@ -12,13 +13,13 @@ export default function SiteHeader({ variant }: Props) {
     <header className='site-header'>
 
       {variant === 'home' ? (
-        <a href='/' className='brand-stamp' aria-label='LE FOG — home'>
+        <Link href='/' className='brand-stamp' aria-label='LE FOG — home'>
           <Image src='/images/logo.svg' alt='' width={52} height={52} />
-        </a>
+        </Link>
       ) : (
-        <a href='/' className='back-link'>
+        <Link href='/' className='back-link'>
           ← LE FOG
-        </a>
+        </Link>
       )}
       <Navigation />
       <div className='site-header-actions'>

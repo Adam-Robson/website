@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import ContactForm from '@/components/contact-form';
 import SiteHeader from '@/components/site-header';
-import '@/components/styles/contact.css';
+import '@/app/contact/contact.css';
 import '@/components/styles/interior-pages.css';
 import type { Metadata } from 'next';
 import { sharedOgImage } from '@/components/shared-og-image';
@@ -24,19 +25,11 @@ export default function ContactPage() {
         <h1 className='page-eyebrow'>Contact</h1>
         <p className='page-body contact-intro'>
           For questions, booking, press, or anything else, email{' '}
-          <a href='mailto:info@lefog.xyz' className='contact-inline-link'>
+          <Link href='mailto:info@lefog.xyz' className='contact-inline-link'>
             info@lefog.xyz
-          </a>
+          </Link>
           .
         </p>
-        <div className='contact-grid'>
-          <div className='contact-item'>
-            <span className='contact-label'>General</span>
-            <a href='mailto:info@lefog.xyz' className='contact-value'>
-              info@lefog.xyz
-            </a>
-          </div>
-        </div>
         <ContactForm />
       </main>
     </div>

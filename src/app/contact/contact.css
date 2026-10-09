@@ -7,13 +7,6 @@ a.contact-value {
   transition: text-decoration-color 0.2s;
 }
 
-.contact-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-  margin-block-start: 0.5rem;
-}
-
 .contact-item {
   display: flex;
   flex-direction: column;
@@ -53,7 +46,6 @@ a.contact-value {
   border-radius: 0.5rem;
   background-color: transparent;
   color: var(--text);
-  /* 1rem minimum: iOS Safari zooms the whole page on focus for anything smaller. */
   font-size: 1rem;
   font-weight: 300;
   transition: border-color 0.2s;

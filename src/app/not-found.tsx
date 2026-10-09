@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import SiteHeader from '@/components/site-header';
 import '@/components/styles/interior-pages.css';
 import '@/components/styles/status-page.css';
@@ -20,8 +21,8 @@ export default function NotFound() {
           broken.
         </p>
         <p className='status-page-actions'>
-          <a href='/albums'>Browse the albums</a>
-          <a href='/'>Back home</a>
+          <Link href='/albums'>Browse the albums</Link>
+          <Link href='/'>Back home</Link>
         </p>
       </main>
     </div>

@@ -1,10 +1,10 @@
 'use client';
 import { DownloadSimpleIcon } from '@phosphor-icons/react';
+import Link from 'next/link';
 import PhosphorIcon from '@/components/phosphor-icon';
 import { useAudio } from '@/context/audio-provider';
 import type { AccessLevel } from '@/lib/types/access-level';
 import type { SongMeta } from '@/lib/types/song-meta';
-
 /**
  * Renders the track list for an album. Permissions for playback
  * and download are controlled here.
@@ -65,7 +65,7 @@ export default function TrackList({
               </span>
             )}
             {canDownload && (
-              <a
+              <Link
                 className='tape-track-download'
                 href={`/api/download?key=${encodeURIComponent(song.key)}`}
                 aria-label={`Download ${song.title}`}
@@ -75,7 +75,7 @@ export default function TrackList({
                   size={16}
                   aria-hidden='true'
                 />
-              </a>
+              </Link>
             )}
           </li>
         );

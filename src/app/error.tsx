@@ -26,12 +26,12 @@ export default function PageError({
         <p className='page-body'>
           The page didn't load properly. It's usually temporary — try again.
         </p>
-        <p className='status-page-actions'>
+        <div className='status-page-actions'>
           <button type='button' onClick={reset}>
             Try again
           </button>
           <p>Or navigate<Link href='/'>{' '}Back home</Link>.</p>
-        </p>
+        </div>
         {error.digest && (
           <p className='status-page-digest'>Reference: {error.digest}</p>
         )}

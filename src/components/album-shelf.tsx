@@ -7,7 +7,7 @@ import type { AccessLevel } from '@/lib/types/access-level';
 import type { Song } from '@/lib/types/song';
 import type { SongMeta } from '@/lib/types/song-meta';
 import { orderedAlbums } from '@/lib/utils/ordered-albums';
-
+import '@/components/styles/album-shelf.css';
 export default function AlbumShelf({
   songs,
   accessLevel,

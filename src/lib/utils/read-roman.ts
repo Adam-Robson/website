@@ -1,5 +1,6 @@
 import { ROMAN_NUMERALS, ROMAN_PREFIX } from '@/lib/constants/number-parsing';
 import type { SongTitle } from '@/lib/types/song-title';
+import { romanToInt } from '@/lib/utils/roman-to-int';
 /**
  * Reads a Roman-numbered track from a song title.
  *

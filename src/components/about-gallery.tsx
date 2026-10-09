@@ -7,9 +7,7 @@ import '@/components/styles/about-gallery.css';
  * It cycles through three self-portraits with different color casts.
  */
 const PORTRAITS = [
-  '/images/facedeer.webp',
-  '/images/coffeecup.webp',
-  '/images/facestars.webp',
+  '/images/facedeer.webp'
 ];
 
 export default function AboutGallery() {
@@ -35,9 +33,7 @@ export default function AboutGallery() {
 
       <figcaption className='about-gallery-caption'>
         Three portraits of LE FOG: in a deer mask against a textured wall,
-        tinted deep teal and oxblood; backlit by morning sun, holding a mug
-        printed with a coffee-drinking loop written in code; and under pink neon
-        in heart-shaped sunglasses, a star decal on one cheek.
+        tinted deep teal and oxblood; backlit by morning sun.
       </figcaption>
     </figure>
   );

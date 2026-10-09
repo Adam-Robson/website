@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import { SITE_URL } from '@/lib/constants/site-url';
+import type { Metadata } from 'next';
 import { sharedOgImage } from '@/components/shared-og-image';
+import { SITE_URL } from '@/lib/constants/site-url';
 /**
  * Metadata configuration for the LE FOG website.
  */
-export const metadata: Metadata = {
+export const PageMetadata: Metadata = {
   applicationName: 'LE FOG',
   manifest: '/manifest.json',
   title: {
